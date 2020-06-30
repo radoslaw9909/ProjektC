@@ -30,9 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.A1 = new System.Windows.Forms.Button();
             this.B1 = new System.Windows.Forms.Button();
@@ -66,6 +66,20 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.fileToolStripMenuItem.Text = "Plik";
             // 
+            // newGaToolStripMenuItem
+            // 
+            this.newGaToolStripMenuItem.Name = "newGaToolStripMenuItem";
+            this.newGaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.newGaToolStripMenuItem.Text = "Nowa gra ";
+            this.newGaToolStripMenuItem.Click += new System.EventHandler(this.newGaToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.exitToolStripMenuItem.Text = "Zakończ";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -75,24 +89,10 @@
             this.helpToolStripMenuItem.Text = "Pomoc";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
-            // newGaToolStripMenuItem
-            // 
-            this.newGaToolStripMenuItem.Name = "newGaToolStripMenuItem";
-            this.newGaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newGaToolStripMenuItem.Text = "Nowa gra ";
-            this.newGaToolStripMenuItem.Click += new System.EventHandler(this.newGaToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Zakończ";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.aboutToolStripMenuItem.Text = "O twórcy";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -104,7 +104,7 @@
             this.A1.Size = new System.Drawing.Size(100, 100);
             this.A1.TabIndex = 1;
             this.A1.UseVisualStyleBackColor = true;
-            this.A1.Click += new System.EventHandler(this.button1_Click);
+            this.A1.Click += new System.EventHandler(this.button_click);
             // 
             // B1
             // 
@@ -114,6 +114,7 @@
             this.B1.Size = new System.Drawing.Size(100, 100);
             this.B1.TabIndex = 2;
             this.B1.UseVisualStyleBackColor = true;
+            this.B1.Click += new System.EventHandler(this.button_click);
             // 
             // A2
             // 
@@ -123,7 +124,7 @@
             this.A2.Size = new System.Drawing.Size(100, 100);
             this.A2.TabIndex = 3;
             this.A2.UseVisualStyleBackColor = true;
-            this.A2.Click += new System.EventHandler(this.button3_Click);
+            this.A2.Click += new System.EventHandler(this.button_click);
             // 
             // A3
             // 
@@ -133,6 +134,7 @@
             this.A3.Size = new System.Drawing.Size(100, 100);
             this.A3.TabIndex = 4;
             this.A3.UseVisualStyleBackColor = true;
+            this.A3.Click += new System.EventHandler(this.button_click);
             // 
             // C2
             // 
@@ -142,6 +144,7 @@
             this.C2.Size = new System.Drawing.Size(100, 100);
             this.C2.TabIndex = 5;
             this.C2.UseVisualStyleBackColor = true;
+            this.C2.Click += new System.EventHandler(this.button_click);
             // 
             // C3
             // 
@@ -151,6 +154,7 @@
             this.C3.Size = new System.Drawing.Size(100, 100);
             this.C3.TabIndex = 6;
             this.C3.UseVisualStyleBackColor = true;
+            this.C3.Click += new System.EventHandler(this.button_click);
             // 
             // B3
             // 
@@ -160,6 +164,7 @@
             this.B3.Size = new System.Drawing.Size(100, 100);
             this.B3.TabIndex = 7;
             this.B3.UseVisualStyleBackColor = true;
+            this.B3.Click += new System.EventHandler(this.button_click);
             // 
             // B2
             // 
@@ -169,6 +174,7 @@
             this.B2.Size = new System.Drawing.Size(100, 100);
             this.B2.TabIndex = 8;
             this.B2.UseVisualStyleBackColor = true;
+            this.B2.Click += new System.EventHandler(this.button_click);
             // 
             // C1
             // 
@@ -178,6 +184,7 @@
             this.C1.Size = new System.Drawing.Size(100, 100);
             this.C1.TabIndex = 9;
             this.C1.UseVisualStyleBackColor = true;
+            this.C1.Click += new System.EventHandler(this.button_click);
             // 
             // Form1
             // 
