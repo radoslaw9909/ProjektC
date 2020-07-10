@@ -46,9 +46,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.xWinCount = new System.Windows.Forms.Label();
-            this.oWinCount = new System.Windows.Forms.Label();
-            this.drawCount = new System.Windows.Forms.Label();
+            this.x_win_count = new System.Windows.Forms.Label();
+            this.o_win_count = new System.Windows.Forms.Label();
+            this.draw_count = new System.Windows.Forms.Label();
+            this.resetujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +68,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newGaToolStripMenuItem,
+            this.resetujToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
@@ -75,14 +77,14 @@
             // newGaToolStripMenuItem
             // 
             this.newGaToolStripMenuItem.Name = "newGaToolStripMenuItem";
-            this.newGaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.newGaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newGaToolStripMenuItem.Text = "Nowa gra ";
             this.newGaToolStripMenuItem.Click += new System.EventHandler(this.newGaToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Zakończ";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -110,7 +112,7 @@
             this.A1.Size = new System.Drawing.Size(100, 100);
             this.A1.TabIndex = 1;
             this.A1.UseVisualStyleBackColor = true;
-            this.A1.Click += new System.EventHandler(this.buttonClick);
+            this.A1.Click += new System.EventHandler(this.button_click);
             this.A1.MouseEnter += new System.EventHandler(this.buttonEnter);
             this.A1.MouseLeave += new System.EventHandler(this.buttonLeave);
             // 
@@ -241,43 +243,49 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Gracz O";
             // 
-            // xWinCount
+            // x_win_count
             // 
-            this.xWinCount.AutoSize = true;
-            this.xWinCount.Location = new System.Drawing.Point(43, 399);
-            this.xWinCount.Name = "xWinCount";
-            this.xWinCount.Size = new System.Drawing.Size(15, 13);
-            this.xWinCount.TabIndex = 13;
-            this.xWinCount.Text = "O";
+            this.x_win_count.AutoSize = true;
+            this.x_win_count.Location = new System.Drawing.Point(43, 399);
+            this.x_win_count.Name = "x_win_count";
+            this.x_win_count.Size = new System.Drawing.Size(15, 13);
+            this.x_win_count.TabIndex = 13;
+            this.x_win_count.Text = "O";
             // 
-            // oWinCount
+            // o_win_count
             // 
-            this.oWinCount.AutoSize = true;
-            this.oWinCount.Location = new System.Drawing.Point(264, 399);
-            this.oWinCount.Name = "oWinCount";
-            this.oWinCount.Size = new System.Drawing.Size(15, 13);
-            this.oWinCount.TabIndex = 14;
-            this.oWinCount.Text = "O";
-            this.oWinCount.Click += new System.EventHandler(this.label5_Click);
+            this.o_win_count.AutoSize = true;
+            this.o_win_count.Location = new System.Drawing.Point(264, 399);
+            this.o_win_count.Name = "o_win_count";
+            this.o_win_count.Size = new System.Drawing.Size(0, 13);
+            this.o_win_count.TabIndex = 14;
+            this.o_win_count.Click += new System.EventHandler(this.label5_Click);
             // 
-            // drawCount
+            // draw_count
             // 
-            this.drawCount.AutoSize = true;
-            this.drawCount.Location = new System.Drawing.Point(155, 399);
-            this.drawCount.Name = "drawCount";
-            this.drawCount.Size = new System.Drawing.Size(15, 13);
-            this.drawCount.TabIndex = 15;
-            this.drawCount.Text = "O";
-            this.drawCount.Click += new System.EventHandler(this.label6_Click);
+            this.draw_count.AutoSize = true;
+            this.draw_count.Location = new System.Drawing.Point(155, 399);
+            this.draw_count.Name = "draw_count";
+            this.draw_count.Size = new System.Drawing.Size(15, 13);
+            this.draw_count.TabIndex = 15;
+            this.draw_count.Text = "O";
+            this.draw_count.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // resetujToolStripMenuItem
+            // 
+            this.resetujToolStripMenuItem.Name = "resetujToolStripMenuItem";
+            this.resetujToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.resetujToolStripMenuItem.Text = "Resetuj";
+            this.resetujToolStripMenuItem.Click += new System.EventHandler(this.resetujToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 441);
-            this.Controls.Add(this.drawCount);
-            this.Controls.Add(this.oWinCount);
-            this.Controls.Add(this.xWinCount);
+            this.Controls.Add(this.draw_count);
+            this.Controls.Add(this.o_win_count);
+            this.Controls.Add(this.x_win_count);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -292,6 +300,7 @@
             this.Controls.Add(this.A1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -324,9 +333,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label xWinCount;
-        private System.Windows.Forms.Label oWinCount;
-        private System.Windows.Forms.Label drawCount;
+        private System.Windows.Forms.Label x_win_count;
+        private System.Windows.Forms.Label o_win_count;
+        private System.Windows.Forms.Label draw_count;
+        private System.Windows.Forms.ToolStripMenuItem resetujToolStripMenuItem;
     }
 }
 

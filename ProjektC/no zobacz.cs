@@ -17,56 +17,25 @@ namespace ProjektC
         bool turn = true;
         int turnCount = 0;
 
+
+
         public Form1()
         {
             InitializeComponent();
         }
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void newGaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            turn = true;
-            turnCount = 0;
-
-            try
-            {
-                foreach (Control c in Controls)
-                {
-                    Button b = (Button)c;
-                    b.Enabled = true;
-                    b.Text = "";
-                }
-            }
-            catch { }
-        }
-        private void buttonEnter(object sender, EventArgs e)
-        {
-            Button b = (Button)sender;
-            if (b.Enabled)
-            {
-                if (turn)
-                    b.Text = "X";
-                else
-                    b.Text = "O";
-            }
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Stworzona przez Radosława");
         }
 
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
 
         private void button_click(object sender, EventArgs e)
         {
@@ -76,11 +45,15 @@ namespace ProjektC
                 b.Text = "X";
             else
                 b.Text = "O";
+
             turn = !turn;
+
             b.Enabled = false;
             turnCount++;
+
             checkForWinner();
         }
+
 
         private void checkForWinner()
         {
@@ -109,39 +82,45 @@ namespace ProjektC
                 thereIsAwinner = true;
             else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!C1.Enabled))
                 thereIsAwinner = true;
-          
+
 
             if (thereIsAwinner)
             {
+                int pointX = 0;
+                int pointY = 0;
+                
                 disableButtons();
 
                 string winner = "";
                 if (turn)
                 {
                     winner = "O";
-                    
+                    pointX++;
+                    o_win_count.Text = pointX.ToString();
                 }
                 else
                 {
                     winner = "X";
-                   
+                    pointY++;
+                    x_win_count.Text = pointY.ToString();
                 }
-                MessageBox.Show(winner + " WINS!!!");
 
-            }
+                MessageBox.Show(winner + " WINS!!!");
+            } //end if 
             else
             {
                 if (turnCount == 9)
                 {
-                    
-                    MessageBox.Show("Draw" + " Try again!");
+                    int draw = 0;
+                    draw++;
+                    draw_count.Text = draw.ToString();
+                    MessageBox.Show("Draw!!");
                 }
             }
-
-        }
+        } // end checkforwinner
 
         private void disableButtons()
-            // Wyłączanie właściwości przycisków po wygranej 
+        // Wyłączanie właściwości przycisków po wygranej 
         {
             try
             {
@@ -153,12 +132,44 @@ namespace ProjektC
             }
             catch { }
         }
+        private void newGaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            turn = true;
+            turnCount = 0;
 
-        private void buttonClick(object sender, EventArgs e)
+            
+                foreach (Control c in Controls)
+                {
+                    try
+                    {
+                    Button b = (Button)c;
+                    b.Enabled = true;
+                    b.Text = "";
+                    }
+                catch { }
+                }   
+           
+        }
+
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-        // seing whose turn it is when moving on buttons 
+
+        
+        private void buttonEnter(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.Enabled)
+            {
+                if (turn)
+                    b.Text = "X";
+                else
+                    b.Text = "O";
+            }
+        }
+
         private void buttonLeave(object sender, EventArgs e)
         {
             Button b = (Button)sender;
@@ -168,8 +179,16 @@ namespace ProjektC
             }
 
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
+
+       
+        // seing whose turn it is when moving on buttons 
         
+
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -183,6 +202,15 @@ namespace ProjektC
 
         private void label5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void resetujToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            x_win_count.Text = "0";
+            o_win_count.Text = "O";
+            draw_count.Text = "O";
+          
 
         }
     }
