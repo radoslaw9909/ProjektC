@@ -238,7 +238,6 @@
             this.label2.Size = new System.Drawing.Size(77, 25);
             this.label2.TabIndex = 11;
             this.label2.Text = "Remis";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -255,28 +254,27 @@
             this.x_win_count.AutoSize = true;
             this.x_win_count.Location = new System.Drawing.Point(43, 399);
             this.x_win_count.Name = "x_win_count";
-            this.x_win_count.Size = new System.Drawing.Size(15, 13);
+            this.x_win_count.Size = new System.Drawing.Size(13, 13);
             this.x_win_count.TabIndex = 13;
-            this.x_win_count.Text = "O";
+            this.x_win_count.Text = "0";
             // 
             // o_win_count
             // 
             this.o_win_count.AutoSize = true;
-            this.o_win_count.Location = new System.Drawing.Point(264, 399);
+            this.o_win_count.Location = new System.Drawing.Point(265, 399);
             this.o_win_count.Name = "o_win_count";
-            this.o_win_count.Size = new System.Drawing.Size(0, 13);
+            this.o_win_count.Size = new System.Drawing.Size(13, 13);
             this.o_win_count.TabIndex = 14;
-            this.o_win_count.Click += new System.EventHandler(this.label5_Click);
+            this.o_win_count.Text = "0";
             // 
             // draw_count
             // 
             this.draw_count.AutoSize = true;
             this.draw_count.Location = new System.Drawing.Point(155, 399);
             this.draw_count.Name = "draw_count";
-            this.draw_count.Size = new System.Drawing.Size(15, 13);
+            this.draw_count.Size = new System.Drawing.Size(13, 13);
             this.draw_count.TabIndex = 15;
-            this.draw_count.Text = "O";
-            this.draw_count.Click += new System.EventHandler(this.label6_Click);
+            this.draw_count.Text = "0";
             // 
             // Form1
             // 
