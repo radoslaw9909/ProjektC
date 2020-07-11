@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +50,6 @@
             this.x_win_count = new System.Windows.Forms.Label();
             this.o_win_count = new System.Windows.Forms.Label();
             this.draw_count = new System.Windows.Forms.Label();
-            this.resetujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,14 +77,21 @@
             // newGaToolStripMenuItem
             // 
             this.newGaToolStripMenuItem.Name = "newGaToolStripMenuItem";
-            this.newGaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newGaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.newGaToolStripMenuItem.Text = "Nowa gra ";
             this.newGaToolStripMenuItem.Click += new System.EventHandler(this.newGaToolStripMenuItem_Click);
+            // 
+            // resetujToolStripMenuItem
+            // 
+            this.resetujToolStripMenuItem.Name = "resetujToolStripMenuItem";
+            this.resetujToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.resetujToolStripMenuItem.Text = "Resetuj";
+            this.resetujToolStripMenuItem.Click += new System.EventHandler(this.resetujToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.exitToolStripMenuItem.Text = "Zakończ";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -218,9 +225,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(12, 358);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 25);
+            this.label1.Size = new System.Drawing.Size(94, 25);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Gracz X";
+            this.label1.Text = "Gracz 1";
             // 
             // label2
             // 
@@ -239,9 +246,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.Location = new System.Drawing.Point(227, 358);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 25);
+            this.label3.Size = new System.Drawing.Size(94, 25);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Gracz O";
+            this.label3.Text = "Gracz 2";
             // 
             // x_win_count
             // 
@@ -270,13 +277,6 @@
             this.draw_count.TabIndex = 15;
             this.draw_count.Text = "O";
             this.draw_count.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // resetujToolStripMenuItem
-            // 
-            this.resetujToolStripMenuItem.Name = "resetujToolStripMenuItem";
-            this.resetujToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.resetujToolStripMenuItem.Text = "Resetuj";
-            this.resetujToolStripMenuItem.Click += new System.EventHandler(this.resetujToolStripMenuItem_Click);
             // 
             // Form1
             // 
